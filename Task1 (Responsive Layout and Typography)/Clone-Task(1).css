@@ -86,6 +86,12 @@ nav {
     gap: 250px;              /* Gap between nav items */
 }
 
+@media (max-width: 1023px) {
+    .nav-links {
+        gap: 30px; /* Adjust gap for screen smaller than desktop */
+    }
+}
+
 .nav-links li {
     margin: 0 15px; /* Space between links */
 }
