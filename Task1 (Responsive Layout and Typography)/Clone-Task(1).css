@@ -31,6 +31,7 @@ body {
         max-width: 1050px;
         border-bottom: 20px;
     }
+    h1 {font-size: 7rem;}
     footer {
         width: 104%;
         margin-left: -20px;
@@ -41,18 +42,21 @@ body {
     .whiteBG {
         padding: 30px;           /* For tablet layout */
     }
+    h1, main h2 {text-align: center;}
 }
 
 @media (max-width: 720px) {
     .whiteBG {
         padding: 20px;           /* For large-mobile layout */
     }
+    h1, main h2 {text-align: center;}
 }
 
 @media (max-width: 540px) {
     .whiteBG {
         padding: 12px;           /* For small-mobile layout */
     }
+    h1, main h2 {text-align: center;}
 }
 
 /* Aligning the logo in the center */
@@ -102,24 +106,26 @@ nav {
     font-family: "Josefin Sans", sans-serif; /* Body font */
 }
 
+h2 {font-size: 2rem;}
+
 main h1{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
-main h2{
+/*main h2{
     font-size: 1rem;
-}
+}*/
 
 /* Setting font size for first paragraph (desktop layout) */
 @media (min-width: 1024px) {
     main p:first-of-type {  /* first-of-type is used to select the first paragraph */
-        font-size: 1.25rem; /* Larger font size for desktop */
+        font-size: 1.5rem; /* Larger font size for desktop */
     }
 }
 
 /* Setting font size for first paragraph (layout for smaller screens than desktop) */
 @media (max-width: 1023px) {
     main p:first-of-type {
-        font-size: 1rem; /* Setting default font size for smaller screens */
+        font-size: 1.25rem; /* Setting default font size for smaller screens */
     }
 }
 
@@ -141,7 +147,7 @@ main h2{
 }
 
 .heading-content h2 {
-    font-size: 1rem; /* Adjusting font size */
+    font-size: 2rem; /* Adjusting font size */
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -172,6 +178,12 @@ main h2{
     grid-template-columns: 2fr 1fr 1fr;  /* this will allow to have 3 columns */
     grid-template-rows: repeat(2, auto); /* this will allow to have 2 rows */
     gap: 0px;                            /* this will remove the gap between the images */
+    margin: -19.5px;                     /* this helps to remove the gap between the images (to touch the border) */
+    align-items: center;
+}
+
+.img-all {
+    border: 0.5px solid black; /* Adding border */
 }
 
 .img-noset {
@@ -197,6 +209,7 @@ main h2{
         grid-template-columns: repeat(2, 1fr); /* repeat(2,1fr) means 2 equal columns */
         grid-template-rows: repeat(2, auto);   /* repeat(2,auto) means 2 rows */
         gap: 0;
+        margin: -29px;
     }
     .img-noset {
         display: none; /* Hide the image that spans 2 columns */
@@ -220,34 +233,50 @@ main h2{
     }*/
 }
 
+/* Styling images for small screen layout */
+@media (max-width: 539px) {
+    .img-5 {margin: -11.75px}
+}
+
 .author-h2 {
-    font-size: 1.25rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 10px; /* Provides some space between the image and the text */
     font-family: "Protest Guerrilla", sans-serif;
 }
 
+.author-p-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
 .author-para {
+    flex: 1;          /* Take up the remaining space */
+    text-align: left;
     font-size: 1rem;
     line-height: 1.6; /* Provides some space between the lines */
-    text-align: left;
     margin: 0 20px;   /* Provides some space between the text and the edges */
     font-family: "Josefin Sans", sans-serif;
 }
 
-.pp-img {
+.pp-img, .pp-img-small {
     width: 200px;       /* Set the width of the image */
     height: auto;       /* Keep the aspect ratio */
     border-radius: 50%; /* Make the image a circle */
+    margin: 0;
 }
 
 /* Styling class "author" for desktop and tablet layout */
-@media (min-width: 721px) {
+@media (min-width: 720px) {
+    .author {padding: 60px;}
     .author-para {
         display: inline-block;     /* inline-block helps to keep the text and image side by side */
         width: calc(100% - 180px); /* calc(100% - 180px) means the text will take up the remaining space */
         vertical-align: middle;    /* vertical-align: middle helps to center the text vertically */
     }
+    .pp-img-small{display: none;}
     .pp-img {
         float: right;
         margin: 0 20px 20px 0; /* Provides some space between the image and the edges */
@@ -255,12 +284,13 @@ main h2{
 }
 
 /* Styling class "author" for large & small screen layout */
-@media (max-width: 720px) {
-    .pp-img {
+@media (max-width: 719px) {
+    .pp-img-small {
         display: block;      /* display: block helps to make the image take up the full width */
         margin: 0 auto 20px; /* Provides some space between the image and the edges */
         width: 120px;        /* Set the width of the image */
     }
+    .pp-img {display: none;}
 }
 
 footer {
@@ -269,6 +299,19 @@ footer {
     text-align: center;           /* Center text */
     padding: 20px;                /* Space inside footer */
     margin-top: 20px;             /* Space above footer */
+    margin: -10;
+    border-top: 0.5px solid black;
+    width: 100%;
+}
+
+/* Styling footer for screens smaller than desktop */
+@media (max-width: 1023px) {
+    footer {
+        margin-right: -70px;
+        margin-left: -30px;
+        margin-bottom: -12px;
+        padding: 15px;
+    }
 }
 
 
