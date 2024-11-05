@@ -304,9 +304,21 @@ footer {
     width: 100%;
 }
 
-/* Styling footer for screens smaller than desktop */
+/* Styling footer for tablet */
 @media (max-width: 1023px) {
     footer {
+        width: 104.75%;
+        margin-right: -70px;
+        margin-left: -30px;
+        margin-bottom: -12px;
+        padding: 15px;
+    }
+}
+
+/* Styling footer for screens smaller than tablet */
+@media (max-width: 719px) {
+    footer {
+        width: 103.75%;
         margin-right: -70px;
         margin-left: -30px;
         margin-bottom: -12px;
