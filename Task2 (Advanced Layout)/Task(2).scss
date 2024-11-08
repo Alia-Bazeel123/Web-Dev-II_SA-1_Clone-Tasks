@@ -1,0 +1,32 @@
+$large-font: 3em;
+$midium-font: 2em;
+$small-font: 1.5em;
+$white: #FFFFFF;
+$dark-blue: #070410;
+$navy-blue: #231651;
+$light-blue: #4DCCBD;
+$yellow: #EEF36A;
+$zero: 0;
+
+button {font-size: $midium-font; /* font size --> 2em */}
+p {font-size: $small-font; /* font size --> 1.5em */}
+
+
+@media (min-width: 1024px) {                            /* Desktop layout */
+    header {
+        font-size: $large-font; /* font size --> 3em */
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {     /* Tablet layout */
+    header {
+        font-size: $large-font; /* font size --> 3em */
+    }
+}
+
+@media (min-width: 360px) and (max-width: 719px) {     /* Mobile layout */
+    header {
+        font-size: $midium-font; /* font size --> 2em */
+    }
+}
+
