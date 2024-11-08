@@ -7,6 +7,12 @@
 
 /* Styling for DESKTOP as default */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Styling the whole body */
 body {
     font-family: "Lato", sans-serif; /* adding font to all text */
@@ -73,46 +79,39 @@ nav a {
 /* Styling the first movie box (desktop) */
 .mov1 {
     display: grid;
-    grid-template-columns: 1fr; /* Single column grid */
-    grid-template-rows: auto 1fr; /* First row for the image, second for text */
-    gap: 20px;
-    max-width: 500px; /* Optional: limit width */
-    margin: 20px auto; /* Optional: center the box */
-    border: 2px solid #000; /* Border for the container */
-    padding: 20px;
-}
-
-.mov-img-container {
-    width: 100%; /* Make image container take up full width */
-    height: auto;
-    overflow: hidden;
+    grid-template-columns: 1fr;   /* 1 column */
+    grid-template-rows: auto 1fr; /* row1-->img & row2-->text */
+    gap: 48px;                    /* large_spacing */
+    margin: 16px auto;            /* small_spacing margin */
+    border: 2x solid #070410;  /* adding border */
+    padding: 48px;                /* large_spacing padding*/
+    max-width: 600px;
 }
 
 .mov-img-1 {
-    width: 100%;
+    width: auto;
     height: auto;
-    display: block;
+    object-position: center;
+    /*display: block;*/ /* remove space below img */
 }
 
 .abt-mov-1 {
-    display: grid;
-    grid-template-columns: 1fr auto; /* Two columns: text on the left, button on the right */
-    align-items: center;
-    gap: 10px;
+    display: grid;                   /* for para & button */
+    grid-template-columns: 1fr auto; /* col1-->text & col2-->button */
+    align-items: center;             /* align text vertically */
+    gap: 16px;                       /* small_spacing between text & button */
 }
 
 .abt-mov-1 p {
-    grid-column: 1 / 2; /* Make paragraph take the first column */
+    grid-column: 1/2;    /* text as col1 */
 }
 
 .b1 {
-    grid-column: 2 / 3; /* Make button take the second column */
-    padding: 10px 20px;
-    background-color: #f00;
-    color: #fff;
-    border: none;
+    grid-column: 2/3;   /* button as col2 */
+    padding: 12px 24px; /* padding inside button */
+    background-color: #4DCCBD;
     cursor: pointer;
-    font-size: 16px;
+    border-radius: 16px; /* small_spacing corners */
 }
 
 /* Styling second & third movie boxes (desktop) */
