@@ -69,60 +69,53 @@ nav a {
     gap: 48px;                  /* large_spacing */
 }
 
-/* Styling first movie box (desktop) */
-.movies .mov1 {
-    display: flex;                      /* flex layout --> horizontal alignment */
-    gap: 16px;                          /* small_spacing between movie boxes*/
-    background-color: #FFFFFF;
-    padding: 16px;                      /* small_spacing for movie content boxes */
-    border: 1px solid #070410;
-    box-shadow: 2px 2px 16px #231651; /* shadow for the movie box */
+
+/* Styling the first movie box (desktop) */
+.mov1 {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column grid */
+    grid-template-rows: auto 1fr; /* First row for the image, second for text */
+    gap: 20px;
+    max-width: 500px; /* Optional: limit width */
+    margin: 20px auto; /* Optional: center the box */
+    border: 2px solid #000; /* Border for the container */
+    padding: 20px;
 }
 
-/* Styling second and third movie box for column layout (desktop) */
-.movies .mov-vertical {
-    display: grid;                  /* grid layout --> coloumn */
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    gap: 16px;                      /* small_spacing for movie content boxes */
-}
-
-/* Styling second to sixth movie box (desktop) */
-.movies .mov2, .movies .mov3, .movies .mov4, .movies .mov5, .movies .mov6 {
-    /*margin: 16px;*/ /* small_spacing for movie content boxes */
-    background-color: #FFFFFF;
-    padding: 16px; /* small_spacing for inside movie content boxes */
-    border: 1px solid #070410;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 2px 2px 16px #231651;
-}
-
-/* Styling movie IMAGEs (desktop) */
-.mov-img-1, .mov-img-2, .mov-img-3, .mov-img-4, .mov-img-5, .mov-img-6 {
-    max-width: 100%;     /* Helps img to take full width of the box */
+.mov-img-container {
+    width: 100%; /* Make image container take up full width */
     height: auto;
-    margin-bottom: 16px; /* small_spacing below img */
+    overflow: hidden;
 }
 
-/* Styling movie BUTTONs (desktop) */
-button {
-    text-align: center;
-    border: 1px solid #070410;
-    border-radius: 16px; /* small_spacing for buttons */
-    padding: 16px;       /* small_spacing for buttons */
-    background-color: #4DCCBD;
+.mov-img-1 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.abt-mov-1 {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Two columns: text on the left, button on the right */
+    align-items: center;
+    gap: 10px;
+}
+
+.abt-mov-1 p {
+    grid-column: 1 / 2; /* Make paragraph take the first column */
+}
+
+.b1 {
+    grid-column: 2 / 3; /* Make button take the second column */
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
     cursor: pointer;
-    margin-top: auto;
-    align-self: center;  /* horizontally align buttons in the center */
+    font-size: 16px;
 }
 
+/* Styling second & third movie boxes (desktop) */
 
-@media (min-width: 1024px) {                            /* Desktop layout */
-}
 
-@media (min-width: 720px) and (max-width: 1023px) {     /* Tablet layout */
-}
-
-@media (min-width: 360px) and (max-width: 719px) {      /* Mobile layout */
-}
+/* Styling fourth to sixth movie boxes (desktop) */

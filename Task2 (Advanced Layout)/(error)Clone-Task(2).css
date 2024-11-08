@@ -1,0 +1,63 @@
+
+
+/* Styling first movie box (desktop) */
+.movies .mov1 {
+    display: flex;                      /* flex layout --> horizontal alignment */
+    gap: 16px;                          /* small_spacing between movie boxes*/
+    background-color: #FFFFFF;
+    padding: 16px;                      /* small_spacing for movie content boxes */
+    border: 1px solid #070410;
+    box-shadow: 2px 2px 16px #231651; /* shadow for the movie box */
+}
+
+/* Styling second and third movie box for column layout (desktop) */
+.movies .mov-vertical {
+    display: grid;                  /* grid layout --> coloumn */
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 16px;                      /* small_spacing for movie content boxes */
+}
+
+/* Styling second to sixth movie box (desktop) */
+.movies .mov2, .movies .mov3, .movies .mov4, .movies .mov5, .movies .mov6 {
+    /*margin: 16px;*/ /* small_spacing for movie content boxes */
+    background-color: #FFFFFF;
+    padding: 16px; /* small_spacing for inside movie content boxes */
+    border: 1px solid #070410;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 16px #231651;
+}
+
+/* Styling movie IMAGEs (desktop) */
+.mov-img-1, .mov-img-2, .mov-img-3 {
+    max-width: 100%;     /* Helps img to take full width of the box */
+    height: auto;
+    margin-bottom: 16px; /* small_spacing below img */
+}
+.mov-img-4, .mov-img-5, .mov-img-6 {
+    width: 50%;
+    align-content: left;
+}
+
+/* Styling movie BUTTONs (desktop) */
+button {
+    text-align: center;
+    border: 1px solid #070410;
+    border-radius: 16px; /* small_spacing for buttons */
+    padding: 16px;       /* small_spacing for buttons */
+    background-color: #4DCCBD;
+    cursor: pointer;
+    margin-top: auto;
+    align-self: center;  /* horizontally align buttons in the center */
+}
+
+
+@media (min-width: 1024px) {                            /* Desktop layout */
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {     /* Tablet layout */
+}
+
+@media (min-width: 360px) and (max-width: 719px) {      /* Mobile layout */
+}
