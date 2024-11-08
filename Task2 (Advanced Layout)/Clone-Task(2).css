@@ -5,20 +5,25 @@
                        /* All other text --> font-family: "Lato", sans-serif; */
 
 
-h1, h2, h3, h4, h5, h6, button {font-family: "Teko", sans-serif;} /* adding font to heading & button */
+/* Styling for DESKTOP as default */
 
+/* Styling the whole body */
 body {
-    font-family: "Lato", sans-serif;                          /* adding font to all text */
-    background-color: #FFFFFF;
+    font-family: "Lato", sans-serif; /* adding font to all text */
+    background-color: #FFFFFF;     /* white as background */
     margin: 0;
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, button {
+    font-family: "Teko", sans-serif; /* adding font to heading & button */
+}
+
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* space between watch.it and nav*/
     align-items: center;
-    padding: 20px;
+    padding: 16x 48px;
     background-color: #FFFFFF;
     border-bottom: 2px solid #070410;
 }
@@ -26,76 +31,98 @@ header {
 header h1 {
     font-family: "Teko", sans-serif; /* adding font to heading */
     color: #070410;
+    margin: 0;
 }
 
 nav ul {
-    list-style: none;
+    list-style: none; /* To remove default list styling */
     display: flex;
-    gap: 20px;
     margin: 0;
     padding: 0;
 }
 
+nav li {
+    margin-left: 16px; /* small_spacing between nav items */
+}
+
 nav a {
-    text-decoration: none;
+    text-decoration: none; /* remove underline for hyperlink */
     color: #070410;
-    font-weight: 400;
 }
 
 .search {
-    padding: 5px 15px;
+    padding: 8px;
     border: 2px solid #070410;
     border-radius: 5px;
+    color: #070410;
+    text-align: center;
 }
+.search::placeholder {color: #070410;} /* to change the font color of the text "SEARCH" */
 
 .contents {
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
+    max-width: 900px;           /* max-width as in specifications */
+    margin: 0 auto;             /* Placing the main content in center */
+    display: grid;
+    grid-template-columns: 1fr; /* single column layout (desktop) */
     align-items: center;
-    /*padding: 20px;*/
+    padding: 48px;              /* large_spacing for main content container */
+    gap: 48px;                  /* large_spacing */
 }
 
-.mov1, .mov2, .mov3, .mov4, .mov5, .mov6 {
+/* Styling first movie box (desktop) */
+.movies .mov1 {
+    display: flex;                      /* flex layout --> horizontal alignment */
+    gap: 16px;                          /* small_spacing between movie boxes*/
     background-color: #FFFFFF;
-    margin-bottom: 20px;
-    padding: 20px;
+    padding: 16px;                      /* small_spacing for movie content boxes */
+    border: 1px solid #070410;
+    box-shadow: 2px 2px 16px #231651; /* shadow for the movie box */
+}
+
+/* Styling second and third movie box for column layout (desktop) */
+.movies .mov-vertical {
+    display: grid;                  /* grid layout --> coloumn */
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 16px;                      /* small_spacing for movie content boxes */
+}
+
+/* Styling second to sixth movie box (desktop) */
+.movies .mov2, .movies .mov3, .movies .mov4, .movies .mov5, .movies .mov6 {
+    /*margin: 16px;*/ /* small_spacing for movie content boxes */
+    background-color: #FFFFFF;
+    padding: 16px; /* small_spacing for inside movie content boxes */
     border: 1px solid #070410;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 2px 2px 16px #231651;
 }
 
+/* Styling movie IMAGEs (desktop) */
 .mov-img-1, .mov-img-2, .mov-img-3, .mov-img-4, .mov-img-5, .mov-img-6 {
-    width: 100%;
+    max-width: 100%;     /* Helps img to take full width of the box */
     height: auto;
+    margin-bottom: 16px; /* small_spacing below img */
 }
 
-.abt-mov-1, .abt-mov-2, .abt-mov-3, .abt-mov-4, .abt-mov-5, .abt-mov-6 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
-}
-
-p {
-    width: 70%;
-    margin: 0;
-}
-
-.b1, .b2, .b3, .b4, .b5, .b6 {
-    width: 25%;
+/* Styling movie BUTTONs (desktop) */
+button {
     text-align: center;
-    border: 2px solid #070410;
-    padding: 10px;
-    background-color: #FFFFFF;
+    border: 1px solid #070410;
+    border-radius: 16px; /* small_spacing for buttons */
+    padding: 16px;       /* small_spacing for buttons */
+    background-color: #4DCCBD;
     cursor: pointer;
+    margin-top: auto;
+    align-self: center;  /* horizontally align buttons in the center */
 }
 
-.mov-vertical {
-    display: flex;
-    justify-content: space-between;
+
+@media (min-width: 1024px) {                            /* Desktop layout */
 }
 
-.mov-vertical .mov2, .mov-vertical .mov3 {width: 48%;}
+@media (min-width: 720px) and (max-width: 1023px) {     /* Tablet layout */
+}
 
+@media (min-width: 360px) and (max-width: 719px) {      /* Mobile layout */
+}
