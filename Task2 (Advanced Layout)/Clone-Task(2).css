@@ -62,6 +62,7 @@ nav a {
     border-radius: 5px;
     color: #070410;
     text-align: center;
+    background-color: #4DCCBD;
 }
 .search::placeholder {color: #070410;} /* to change the font color of the text "SEARCH" */
 
@@ -75,46 +76,127 @@ nav a {
     gap: 48px;                  /* large_spacing */
 }
 
-
-/* Styling the first movie box (desktop) */
-.mov1 {
-    display: grid;
-    grid-template-columns: 1fr;   /* 1 column */
-    grid-template-rows: auto 1fr; /* row1-->img & row2-->text */
-    gap: 48px;                    /* large_spacing */
-    margin: 16px auto;            /* small_spacing margin */
-    border: 2x solid #070410;  /* adding border */
-    padding: 48px;                /* large_spacing padding*/
-    max-width: 600px;
-}
-
-.mov-img-1 {
-    width: auto;
-    height: auto;
-    object-position: center;
-    /*display: block;*/ /* remove space below img */
-}
-
-.abt-mov-1 {
-    display: grid;                   /* for para & button */
-    grid-template-columns: 1fr auto; /* col1-->text & col2-->button */
-    align-items: center;             /* align text vertically */
-    gap: 16px;                       /* small_spacing between text & button */
-}
-
-.abt-mov-1 p {
-    grid-column: 1/2;    /* text as col1 */
-}
-
-.b1 {
-    grid-column: 2/3;   /* button as col2 */
-    padding: 12px 24px; /* padding inside button */
+/* Styling movie BUTTONs (desktop) */
+button {
+    text-align: center;
+    border: 1px solid #070410;
+    border-radius: 16px; /* small_spacing for buttons */
+    padding: 16px;       /* small_spacing for buttons */
     background-color: #4DCCBD;
     cursor: pointer;
-    border-radius: 16px; /* small_spacing corners */
+    margin-top: auto;
+    align-self: center;  /* horizontally align buttons in the center */
 }
 
-/* Styling second & third movie boxes (desktop) */
+
+@media (min-width: 1024px) {                            /* Desktop layout */
+    /* Styling the first movie box (desktop) */
+    .mov1 {
+        display: grid;
+        grid-template-columns: 1fr;   /* 1 column */
+        grid-template-rows: auto 1fr; /* row1-->img & row2-->text */
+        gap: 48px;                    /* large_spacing */
+        margin: 16px auto;            /* small_spacing margin */
+        border: 2px solid #070410;  /* adding border */
+        padding: 48px;                /* large_spacing padding*/
+        max-width: 900px;             /* width limit */  
+    }
+    .mov-img-1 {
+        width: 100%;
+        height: auto;
+        object-position: center;
+        /*display: block;*/ /* remove space below img */
+        margin-bottom: 16px; /* small_spacing below img */
+    }
+    .abt-mov-1 {
+        display: grid;                   /* for para & button */
+        grid-template-columns: 1fr auto; /* col1-->text & col2-->button */
+        align-items: center;             /* align text vertically */
+        gap: 16px;                       /* small_spacing between text & button */
+    }
+    .abt-mov-1 p {grid-column: 1/2;    /* text as col1 */}
+    .b1 {grid-column: 2/3;   /* button as col2 */}
+
+    /* Styling second & third movie boxes (desktop) */
+    .movies .mov-vertical {
+        display: grid;                  /* grid layout --> coloumn */
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+        gap: 16px;                      /* small_spacing for movie content boxes */
+    }
+    .movies .mov2, .movies .mov3 {
+        /*margin: 16px;*/ /* small_spacing for movie content boxes */
+        background-color: #FFFFFF;
+        padding: 16px; /* small_spacing for inside movie content boxes */
+        border: 2px solid #070410;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*box-shadow: 2px 2px 16px #231651;*/
+    }
+    .mov-img-2, .mov-img-3 {
+        max-width: 100%;     /* Helps img to take full width of the box */
+        height: auto;
+        margin-bottom: 16px; /* small_spacing below img */
+    }
+
+    /* Styling fourth to sixth movie boxes (desktop) */
+    .mov4, .mov5, .mov6 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 48px auto;            /* large_spacing for movie box */
+        max-width: 900px;             /* setting max-width */
+        border: 2px solid #070410;  /* adding border */
+    }
+    .mov-img-4, .mov-img-5, .mov-img-6 {
+        width: 50%; /* img takes 50% of the box width */
+        height: auto;
+        margin-right: 16px; /* small_spacing between img & text */
+    }
+    .abt-mov-4, .abt-mov-5, .abt-mov-6 {
+        width: 50%; /* text takes the rest 50% of the box width */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
 
 
-/* Styling fourth to sixth movie boxes (desktop) */
+@media (min-width: 720px) and (max-width: 1023px) {     /* Tablet layout */
+    header {padding: 16px 32px; /* large_spacing */}
+    .contents {
+        padding: 32px; /* large_spacing */
+        gap: 32px;     /* large_spacing */
+    }
+    /* Styling as columns and rows (tablet) */
+    .contents .movies {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2columns & 3rows */
+        gap: 16px;                      /* small_spacing */
+    }
+    .contents .mov1, .contents .mov2, .contents .mov3, .contents .mov4, .contents .mov5, .contents .mov6 {
+        background-color: #FFFFFF;
+        padding: 16px;
+        border: 2px solid #070410;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mov-img-1, .mov-img-2, .mov-img-3, .mov-img-4, .mov-img-5, .mov-img-6 {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 719px) {      /* Mobile layout */
+    header {padding: 16px 16px; /* large_spacing */}
+    .contents {
+        padding: 16px; /* large_spacing */
+        gap: 16px;     /* large_spacing */
+    }
+    nav {display: none; /* nav-items are not there in the wireframe */}
+    .search {align-content: right;}
+}
+
