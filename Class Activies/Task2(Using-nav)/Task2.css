@@ -1,0 +1,87 @@
+/* Reset default margin/padding for all elements and set box-sizing to border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling: Set global font and background image */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img9.jpg');
+    padding-top: 100px; /* Prevent content overlap with fixed header */
+}
+
+/* Header styling */
+header {
+    background-color: #2e3033ad; /* Semi-transparent dark background */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding inside the header */
+    display: flex; /* Flexbox layout for header */
+    align-items: center; /* Vertically align items in the center */
+    justify-content: space-between; /* Align logo left and nav to take full space */
+    position: fixed; /* Fix header to the top of the page */
+    width: 100%; /* Full width header */
+    top: 0; /* Stick header to the top of the page */
+    z-index: 1000; /* Make sure header is always on top */
+}
+
+/* Logo styling */
+.logo {
+    width: 100px; /* Set width for the logo */
+    height: auto; /* Maintain original aspect ratio */
+    margin-right: 20px; /* Space between logo and navigation */
+}
+
+/* Navigation bar styling */
+.header-nav {
+    flex-grow: 1; /* Allow the nav to take up remaining space */
+    display: flex; /* Flexbox to control the layout */
+    justify-content: space-between; /* Distribute the content (nav links) evenly */
+    align-items: center; /* Vertically align navigation items */
+}
+
+/* Navigation list styling */
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Distribute links evenly across full width */
+    flex-grow: 1; /* Make the ul stretch to fill the space */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* List item styling */
+nav ul li {
+    flex-grow: 1; /* Allow each list item to grow evenly */
+    text-align: center; /* Center the text within each list item */
+}
+
+/* Link styling */
+nav ul li a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block-level element for easier padding */
+    padding: 10px 0; /* Add padding for better clickability */
+}
+
+/* Responsive design: For screens smaller than 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center; /* Center align logo and nav */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav links vertically */
+        align-items: center; /* Center align nav links */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add margin between vertical nav items */
+    }
+
+    .logo {
+        margin-bottom: 20px; /* Space between logo and nav */
+    }
+}
