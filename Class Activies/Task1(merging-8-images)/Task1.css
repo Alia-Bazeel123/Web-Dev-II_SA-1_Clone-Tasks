@@ -1,0 +1,22 @@
+body {
+    display: flex; /* Enables Flexbox for alignment */
+    justify-content: center; /* Centers the container horizontally */
+    align-items: center; /* Centers the container vertically */
+    height: 100vh; /* Sets height to fill the entire viewport */
+    margin: 0; /* Removes default margin around the page */
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+.images {
+    display: grid; /* Enables CSS Grid for layout */
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+    gap: 10px; /* Adds 10px space between grid items */
+}
+
+img {
+    width: 200px; /* Fixed width resembling a book cover */
+    height: 300px; /* Fixed height resembling a book cover */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 5px; /* Adds slight rounding to the corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a light shadow for depth */
+}
