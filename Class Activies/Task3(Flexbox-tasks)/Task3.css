@@ -1,0 +1,181 @@
+/* Reset margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup with background and font */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/premium-photo/grainy-gradient-background-red-white-blue-colors-with-soft-faded-watercolor-border-texture_927344-24167.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body fills the viewport height */
+}
+
+/* Header setup */
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-evenly; /* Distribute links evenly */
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #FF66B2;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: rgb(68, 206, 26);
+    text-decoration: underline;
+}
+
+/* Padding to prevent overlap with fixed header */
+main {
+    padding-top: 120px;
+    flex: 1;
+}
+
+/* Footer setup */
+footer {
+    background-color: #042e55;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    position: relative;
+}
+
+/* Card Design */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 20px auto; /* Center the card */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* subtle box-shadow */
+}
+
+.h2text {
+    color: #ffffff; /* Ensure it's white */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h2 {
+    margin: 15px 0;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card button {
+    padding: 10px 20px;
+    background-color: #46c0c9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Wrap the images when space is not enough */
+    gap: 10px; /* Space between images */
+    justify-content: center;
+}
+
+.image-gallery img {
+    flex: 1 1 150px; /* Ensure images resize appropriately */
+    max-width: 150px;
+    height: auto;
+}
+
+/* Quiz Layout */
+.quiz-question {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(137, 182, 161);
+}
+
+.quiz-options {
+    display: flex;
+    justify-content: space-around; /* Spread options evenly */
+    gap: 10px;
+}
+
+.quiz-options button {
+    padding: 10px;
+    background-color: #46c0c9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* To-Do List */
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between; /* Spread the items */
+    align-items: center;
+    padding: 10px;
+    /*border-bottom: 1px solid #ddd;*/
+    color: rgb(137, 182, 161);
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.todo-item button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

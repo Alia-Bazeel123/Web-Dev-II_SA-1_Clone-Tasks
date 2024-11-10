@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tasks</title>
+    <link rel="stylesheet" href="Task3.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+
+    <!-- Header section with Flexbox navigation bar -->
+    <header class="fixed-header">
+        <h1>Flexbox Layout Exersises</h1>
+        
+        <!-- Flexbox-based Navigation bar -->
+        <nav class="header-nav">
+            <ul> <!-- Navigation links list -->
+                <li> <a href="#Home" class="nav-link"><b>Home</b></a></li>
+                <li> <a href="#card-section" class="nav-link"><b>Card</b></a></li>
+                <li> <a href="#gallery-section" class="nav-link"><b>Gallery</b></a></li>
+                <li> <a href="#quiz-section" class="nav-link"><b>Quiz</b></a></li>
+                <li> <a href="#todo-section" class="nav-link"><b>To-Do</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main id="Home">
+        <!-- Task 2: Card Design -->
+        <section id="card-section">
+            <h2 class="h2text"><i><u>Card Design</u></i></h2>
+            <div class="card">
+                <img src="https://cdn-imgix.headout.com/collection-card-image/158/image/09c609a1134ea7b034ee4cbd61bdbba5-158-dubai-002-dubai-burj-khalifa-01.jpg" alt="Burj Khalifa">
+                <h2>Burj Khalifa</h2>
+                <p>The Burj Khalifa is the tallest building in the world.</p>
+                <button>Learn More</button>
+            </div>
+        </section>
+
+        <br><hr>
+
+        <!-- Task 3: Image Gallery -->
+        <section id="gallery-section">
+            <h2 class="h2text"><i><u>Responsive Image Gallery</u></i></h2>
+            <br>
+            <div class="image-gallery">
+                <img src="https://i.pinimg.com/originals/f8/2c/d6/f82cd68778d6776926f2bd86a013eb40.jpg" alt="eiffel tower">
+                <img src="https://cdn.lovin.co/wp-content/uploads/sites/1/2021/06/22140302/Palm-Jumeirah.png" alt="palm jumeirah">
+                <img src="https://i.pinimg.com/736x/2f/5c/1f/2f5c1f06b77f24cb88d6b1aac362ec48.jpg" alt="Lahore-Pakistan">
+                <img src="https://thumbs.dreamstime.com/b/taj-mahal-sunset-light-agra-india-72653577.jpg" alt="taj mahal">
+                <img src="https://c4.wallpaperflare.com/wallpaper/922/581/191/singapore-buildings-skyscrapers-ferris-wheel-hd-wallpaper-thumb.jpg" alt="singapore">
+            </div>
+        </section>
+
+        <br><hr>
+
+        <!-- Task 4: Flexbox Quiz -->
+        <section id="quiz-section">
+            <h2 class="h2text"><i><u>Quiz Layout</u></i></h2>
+            <br>
+            <div class="quiz-question">
+                <h3>1. What HTML tag makes a new line?</h3>
+                <div class="quiz-options">
+                    <button> &lt;a&gt; </button>
+                    <button> &lt;new&gt; </button>
+                    <button> &lt;br&gt; </button>
+                    <button> &lt;hr&gt; </button>
+                </div>
+                <br><br>
+                <h3>2. What is an example of a CSS event?</h3>
+                <div class="quiz-options">
+                    <button> start </button>
+                    <button> hover </button>
+                    <button> stop </button>
+                    <button> close </button>
+                </div>
+            </div>
+        </section>
+
+        <br><hr>
+
+        <!-- Task 5: To-Do List -->
+        <section id="todo-section">
+            <h2 class="h2text"><i><u>To-Do List</u></i></h2>
+            <ul class="todo-list">
+                <li class="todo-item">
+                    <input type="checkbox">
+                    <label>Complete Homework</label>
+                    <button>Delete</button>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox">
+                    <label>Do Exercise</label>
+                    <button>Delete</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 AliaBazeel. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
