@@ -1,0 +1,135 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #8b4513;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+/* Product Section */
+.pro-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* space between columns */
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: 250px;     /* fixed height */
+    object-fit: cover; /* images evenly fit in the box */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #8b4513;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a3310;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 5px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weston's Chocolate Box</title>
+    <link rel="stylesheet" href="Task5.css"> <!--linking css file-->
+</head>
+<body>
+    <!-- Header Section: Company name and navigation -->
+    <header>
+        <h1 class="title"><i>Weston's Chocolate Box</i></h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#build-box">Build a Box</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#signup">Sign Up/Sign In</a></li>
+                <li><a href="#basket">Basket</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section: Company Overview -->
+    <section id="overview">
+        <h2>About Weston's Chocolate Box</h2>
+        <p>Weston's Chocolate Box offers exquisite handmade chocolates that are perfect for every occasion. Build your own chocolate box with our wide selection of flavors and designs.</p>
+    </section>
+
+    <!-- Section: Promote Key Products -->
+    <section id="products">
+        <h2>Featured Products & Deals</h2>
+        <div class="pro-col">
+            <div class="product">
+                <img src="https://laderach.ae/wp-content/uploads/2020/05/L%C3%A4derach-Box-1.jpg" alt="Assorted Chocolates">
+                <h3>Assorted Chocolate Box</h3>
+                <p>A mix of our best-selling chocolates!</p>
+            </div>
+
+            <div class="product">
+                <img src="https://www.travelandleisure.com/thmb/KLGYDSxkpWcjoa3QuaC_5DCUleE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/bridgewater-chocolate-LUXECOCO1221-1-e054afb092a849f6939d2b71ef1ae35d.jpg" alt="Luxury Collection">
+                <h3>Luxury Chocolate Collection</h3>
+                <p>A premium selection for special occasions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Build Your Own Box -->
+    <section id="build-box">
+        <h2>Build Your Own Box</h2>
+        <form>
+            <label for="occasion">Select Occasion:</label>
+            <select id="occasion" name="occasion">
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="thank-you">Thank You</option>
+                <option value="just-because">Just Because</option>
+            </select>
+
+            <label for="box-size">Select Box Size:</label>
+            <select id="box-size" name="box-size">
+                <option value="small">Small (6 pieces)</option>
+                <option value="medium">Medium (12 pieces)</option>
+                <option value="large">Large (24 pieces)</option>
+            </select>
+
+            <button type="submit">Start Building</button>
+        </form>
+    </section>
+
+    <!-- Section: Contact Details -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@westonschocolatebox.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Chocolate Lane, Sweet City, SC 12345</p>
+    </section>
+
+    <!-- Section: Sign Up / Sign In -->
+    <section id="signup">
+        <h2>Sign Up or Sign In</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign In</button>
+            <p>Don't have an account? <a href="#">Sign Up</a></p>
+        </form>
+    </section>
+
+    <!-- Section: Basket -->
+    <section id="basket">
+        <h2>Your Basket</h2>
+        <p>Your selected chocolates will appear here.</p>
+        <button>View Basket</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Weston's Chocolate Box. All Rights Reserved. [AliaBazeel]</p>
+    </footer>
+</body>
+</html>
