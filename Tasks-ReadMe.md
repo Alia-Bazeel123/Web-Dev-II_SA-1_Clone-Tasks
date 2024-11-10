@@ -32,3 +32,4 @@ In summary, you must ensure that your solutions:
 *The specifications, as well as any media assets required to create the page, are included in your GitHub repository.*
 
 **Please read the full assessment brief on Minerva**
+
