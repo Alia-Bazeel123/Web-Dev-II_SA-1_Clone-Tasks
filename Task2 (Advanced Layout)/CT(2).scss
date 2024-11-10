@@ -1,0 +1,76 @@
+$large-font: 3em;
+$midium-font: 2em;
+$small-font: 1.5em;
+$white: #FFFFFF;
+$black: #070410;
+$dark-blue: 2px solid #070410;
+$navy-blue: #231651;
+$light-blue: #4DCCBD;
+$yellow: #EEF36A;
+
+
+body {background-color: $white; /* white as background */}
+
+header {
+    background-color: $white;
+    border-bottom: 5px solid $black;
+}
+
+header h1 {color: $black;}
+
+nav a {color: $black;}
+
+.search {
+    border: $dark-blue;
+    color: $black;
+    background-color: $light-blue;
+}
+
+.search::placeholder {color: $black;} /* to change the font color of the text "SEARCH" */
+
+button {
+    font-size: $midium-font;       /* font size --> 2em */
+    border: 1px solid $black;      /*border color 1px solid black*/
+    background-color: $light-blue; /* light blue */
+}
+
+p {font-size: $small-font; /* font size --> 1.5em */}
+
+
+@media (min-width: 1024px) {                            /* Desktop layout */
+    header {
+        font-size: $large-font; /* font size --> 3em */
+    }
+    .mov1{
+        border: $dark-blue; /*border color 2px solid black*/
+    }
+    .movies .mov2, .movies .mov3 {
+        background-color: $white;
+        border: $dark-blue;
+        /*box-shadow: 2px 2px 16px #231651;*/
+    }
+    .mov4, .mov5, .mov6 {
+        border: $dark-blue;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {     /* Tablet layout */
+    header {
+        font-size: $large-font; /* font size --> 3em */
+    }
+    .contents .mov1, .contents .mov2, .contents .mov3, .contents .mov4, .contents .mov5, .contents .mov6 {
+        background-color: $white;
+        border: $dark-blue;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 719px) {     /* Mobile layout */
+    header {
+        font-size: $midium-font; /* font size --> 2em */
+    }
+    .contents .mov1, .contents .mov2, .contents .mov3, .contents .mov4, .contents .mov5, .contents .mov6 {
+        background-color: $white;
+        border: $dark-blue;
+    }
+}
+

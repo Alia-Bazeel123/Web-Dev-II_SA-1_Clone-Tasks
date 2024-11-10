@@ -1,0 +1,74 @@
+body {
+  background-color: #FFFFFF; /* white as background */
+}
+
+header {
+  background-color: #FFFFFF;
+  border-bottom: 5px solid #070410;
+}
+
+header h1 {
+  color: #070410;
+}
+
+nav a {
+  color: #070410;
+}
+
+.search {
+  border: 2px solid #070410;
+  color: #070410;
+  background-color: #4DCCBD;
+}
+
+.search::-moz-placeholder {
+  color: #070410;
+}
+
+.search::placeholder {
+  color: #070410;
+} /* to change the font color of the text "SEARCH" */
+button {
+  font-size: 2em; /* font size --> 2em */
+  border: 1px solid #070410; /*border color 1px solid black*/
+  background-color: #4DCCBD; /* light blue */
+}
+
+p {
+  font-size: 1.5em; /* font size --> 1.5em */
+}
+
+@media (min-width: 1024px) { /* Desktop layout */
+  header {
+    font-size: 3em; /* font size --> 3em */
+  }
+  .mov1 {
+    border: 2px solid #070410; /*border color 2px solid black*/
+  }
+  .movies .mov2, .movies .mov3 {
+    background-color: #FFFFFF;
+    border: 2px solid #070410;
+    /*box-shadow: 2px 2px 16px #231651;*/
+  }
+  .mov4, .mov5, .mov6 {
+    border: 2px solid #070410;
+  }
+}
+@media (min-width: 720px) and (max-width: 1023px) { /* Tablet layout */
+  header {
+    font-size: 3em; /* font size --> 3em */
+  }
+  .contents .mov1, .contents .mov2, .contents .mov3, .contents .mov4, .contents .mov5, .contents .mov6 {
+    background-color: #FFFFFF;
+    border: 2px solid #070410;
+  }
+}
+@media (min-width: 360px) and (max-width: 719px) { /* Mobile layout */
+  header {
+    font-size: 2em; /* font size --> 2em */
+  }
+  .contents .mov1, .contents .mov2, .contents .mov3, .contents .mov4, .contents .mov5, .contents .mov6 {
+    background-color: #FFFFFF;
+    border: 2px solid #070410;
+  }
+}/*# sourceMappingURL=CT(2).css.map */
