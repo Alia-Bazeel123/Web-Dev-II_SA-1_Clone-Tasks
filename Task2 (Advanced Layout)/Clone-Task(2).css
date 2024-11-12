@@ -78,26 +78,47 @@ button {
         display: grid;
         grid-template-columns: 1fr;   /* 1 column */
         grid-template-rows: auto 1fr; /* row1-->img & row2-->text */
-        gap: 48px;                    /* large_spacing */
+        gap: 0;
         margin: 16px auto;            /* small_spacing margin */
-        padding: 48px;                /* large_spacing padding*/
-        max-width: 900px;             /* width limit */  
+        /*padding: 48px;*/                /* large_spacing padding*/
+        max-width: 900px;             /* width limit */ 
+        padding: 0;                   /* remove padding */
+        max-height: 560px;
     }
     .mov-img-1 {
+        display: block; /* img as block level element */
         width: 100%;
-        height: auto;
-        object-position: center;
-        /*display: block;*/ /* remove space below img */
-        margin-bottom: 16px; /* small_spacing below img */
+        height: 100%;
+        max-height: 400px;
+        margin: 0;      /* remove margin */
+        /*margin-bottom: 0;*/
+        /*object-position: center;*/
+        /*margin-bottom: 16px;*/ /* small_spacing below img */
     }
     .abt-mov-1 {
+        margin-top: 0;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
         display: grid;                   /* for para & button */
         grid-template-columns: 1fr auto; /* col1-->text & col2-->button */
         align-items: center;             /* align text vertically */
         gap: 16px;                       /* small_spacing between text & button */
     }
-    .abt-mov-1 p {grid-column: 1/2;    /* text as col1 */}
-    .b1 {grid-column: 2/3;   /* button as col2 */}
+    .abt-mov-1 p {
+        grid-column: 1/2;    /* text as col1 */
+        margin: 0;
+        margin-bottom: 100px;
+    }
+    .b1 {
+        grid-column: 2/3;    /* button as col2 */
+        display: block;
+        width: 100px;
+        white-space: normal; /* test wraps */
+        text-align: center;
+        margin-bottom: 100px;
+    }
 
     /* Styling second & third movie boxes (desktop) */
     .movies .mov-vertical {
