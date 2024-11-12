@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFFFF; /* white as background */
+  background-color: #231651; /* setting background color */
 }
 
 header {
@@ -42,16 +42,10 @@ p {
   header {
     font-size: 3em; /* font size --> 3em */
   }
-  .mov1 {
-    border: 2px solid #070410; /*border color 2px solid black*/
-  }
-  .movies .mov2, .movies .mov3 {
+  .mov1, .mov2, .mov3, .mov4, .mov5, .mov6 {
     background-color: #FFFFFF;
-    border: 2px solid #070410;
-    /*box-shadow: 2px 2px 16px #231651;*/
-  }
-  .mov4, .mov5, .mov6 {
-    border: 2px solid #070410;
+    border: 2px solid #070410; /*border color 2px solid black*/
+    box-shadow: 4px 4px 8px #231651; /* right side & bottom shadow */
   }
 }
 @media (min-width: 720px) and (max-width: 1023px) { /* Tablet layout */
@@ -61,6 +55,7 @@ p {
   .contents .mov1, .contents .mov2, .contents .mov3, .contents .mov4, .contents .mov5, .contents .mov6 {
     background-color: #FFFFFF;
     border: 2px solid #070410;
+    box-shadow: 4px 4px 8px #231651; /* right side & bottom shadow */
   }
 }
 @media (min-width: 360px) and (max-width: 719px) { /* Mobile layout */

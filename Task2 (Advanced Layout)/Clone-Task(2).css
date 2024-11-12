@@ -74,6 +74,15 @@ button {
 
 @media (min-width: 1024px) {                            /* Desktop layout */
     /* Styling the first movie box (desktop) */
+    .search {
+        padding: 16px;
+        width: 135px;
+        height: 35px;
+    }
+    .contents {
+        padding-top: 16px;
+        gap: 16px;
+    }
     .mov1 {
         display: grid;
         grid-template-columns: 1fr;   /* 1 column */
@@ -127,38 +136,73 @@ button {
         gap: 16px;                      /* small_spacing for movie content boxes */
     }
     .movies .mov2, .movies .mov3 {
+        max-width: 900px;
         /*margin: 16px;*/ /* small_spacing for movie content boxes */
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /*box-shadow: 2px 2px 16px #231651;*/
     }
     .mov-img-2, .mov-img-3 {
-        max-width: 100%;     /* Helps img to take full width of the box */
-        height: auto;
-        margin-bottom: 16px; /* small_spacing below img */
+        width: 100%; /* Helps img to take full width of the box */
+        height: 50%;
+        object-fit: cover;
+        margin: 0;
+    }
+    .abt-mov-2, .abt-mov-3 {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;     /* align text & button in the center */
+        justify-content: center; /* vertical alignment */
+        gap: 16px;               /* spacing between text & button */
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
+    }
+    .abt-mov-2 p {padding-bottom: 18px;}
+    .abt-mov-3 p {padding-bottom: 73px;}
+    .b2,.b3 {
+        margin: 0; /* align in center */
+        width: 350px;
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 0;
+        padding-top: 0;
     }
 
     /* Styling fourth to sixth movie boxes (desktop) */
     .mov4, .mov5, .mov6 {
+        max-width: 1000px;        /* setting max-width */
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
-        margin: 48px auto;            /* large_spacing for movie box */
-        max-width: 900px;             /* setting max-width */
+        margin: 16px;            /* large_spacing for movie box */
     }
     .mov-img-4, .mov-img-5, .mov-img-6 {
         width: 50%; /* img takes 50% of the box width */
         height: auto;
-        margin-right: 16px; /* small_spacing between img & text */
+        margin-right: 10px; /* small_spacing between img & text */
     }
     .abt-mov-4, .abt-mov-5, .abt-mov-6 {
         width: 50%; /* text takes the rest 50% of the box width */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .abt-mov-4 p {padding-bottom: 30px;}
+    .abt-mov-5 p {padding-bottom: 120px;}
+    .abt-mov-6 p {padding-bottom: 63px;}
+    .b4,.b5, .b6 {
+        margin: 0; /* align in center */
+        width: 360px;
+        display: inline-block;
+        text-align: center;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
 
