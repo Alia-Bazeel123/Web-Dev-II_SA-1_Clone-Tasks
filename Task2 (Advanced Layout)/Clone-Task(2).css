@@ -128,7 +128,7 @@ button {
     }
     .movies .mov2, .movies .mov3 {
         /*margin: 16px;*/ /* small_spacing for movie content boxes */
-        padding: 16px; /* small_spacing for inside movie content boxes */
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
