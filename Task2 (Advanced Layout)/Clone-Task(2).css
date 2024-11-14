@@ -175,7 +175,7 @@ button {
 
     /* Styling fourth to sixth movie boxes (desktop) */
     .mov4, .mov5, .mov6 {
-        max-width: 1000px;        /* setting max-width */
+        max-width: 900px;        /* setting max-width */
         display: flex;
         flex-direction: row;
         align-items: flex-start;
