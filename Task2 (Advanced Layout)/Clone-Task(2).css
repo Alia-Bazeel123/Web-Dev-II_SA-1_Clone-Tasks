@@ -27,6 +27,7 @@ header {
     justify-content: space-between; /* space between watch.it and nav*/
     align-items: center;
     padding: 16x 48px;
+    width: 1343px;                  /* to fit the search inside (extended header-desktop) */
 }
 
 header h1 {
@@ -59,6 +60,7 @@ nav a {text-decoration: none; /* remove underline for hyperlink */}
     align-items: center;
     padding: 48px;              /* large_spacing for main content container */
     gap: 48px;                  /* large_spacing */
+    margin-left: 225px;         /* to make the content perfectly aligned under the extended header */
 }
 
 /* Styling movie BUTTONs (desktop) */
@@ -73,7 +75,6 @@ button {
 
 
 @media (min-width: 1024px) {                            /* Desktop layout */
-    /* Styling the first movie box (desktop) */
     .search {
         padding: 16px;
         width: 135px;
@@ -83,6 +84,7 @@ button {
         padding-top: 16px;
         gap: 16px;
     }
+    /* Styling the first movie box (desktop) */
     .mov1 {
         display: grid;
         grid-template-columns: 1fr;   /* 1 column */
@@ -118,7 +120,7 @@ button {
     .abt-mov-1 p {
         grid-column: 1/2;    /* text as col1 */
         margin: 0;
-        margin-bottom: 100px;
+        margin-bottom: 140px;
     }
     .b1 {
         grid-column: 2/3;    /* button as col2 */
@@ -126,7 +128,7 @@ button {
         width: 100px;
         white-space: normal; /* test wraps */
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 155px;
     }
 
     /* Styling second & third movie boxes (desktop) */
@@ -176,11 +178,13 @@ button {
     /* Styling fourth to sixth movie boxes (desktop) */
     .mov4, .mov5, .mov6 {
         max-width: 900px;        /* setting max-width */
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
         margin: 16px;            /* large_spacing for movie box */
+        margin-left: 0;
     }
     .mov-img-4, .mov-img-5, .mov-img-6 {
         width: 50%; /* img takes 50% of the box width */
@@ -193,9 +197,9 @@ button {
         flex-direction: column;
         justify-content: space-between;
     }
-    .abt-mov-4 p {padding-bottom: 30px;}
-    .abt-mov-5 p {padding-bottom: 120px;}
-    .abt-mov-6 p {padding-bottom: 63px;}
+    .abt-mov-4 p {padding-bottom: 65px;}
+    .abt-mov-5 p {padding-bottom: 125px;}
+    .abt-mov-6 p {padding-bottom: 65px;}
     .b4,.b5, .b6 {
         margin: 0; /* align in center */
         width: 360px;
@@ -208,10 +212,16 @@ button {
 
 
 @media (min-width: 720px) and (max-width: 1023px) {     /* Tablet layout */
-    header {padding: 16px 32px; /* large_spacing */}
+    header {
+        padding: 16px 32px; /* large_spacing */
+        width: 1250px;      /* to fit the search inside (extended header-tablet) */
+        margin-right: 25px;
+        margin-left: 0;
+    }
     .contents {
         padding: 32px; /* large_spacing */
         gap: 32px;     /* large_spacing */
+        width: 900px;
     }
     /* Styling as columns and rows (tablet) */
     .movies {
@@ -261,7 +271,19 @@ button {
         height: auto;
         margin-bottom: 16px;
     }
-    /*button {align-content: center;}*/
+    .abt-mov-1 p{padding-bottom: 16px;}
+    .abt-mov-2 p{padding-bottom: 16px;}
+    .abt-mov-3 p{padding-bottom: 75px;}
+    .abt-mov-4 p{padding-bottom: 16px;}
+    .abt-mov-5 p{padding-bottom: 73px;}
+    .abt-mov-6 p{padding-bottom: 16px;}
+    .b1, .b2, .b3, .b4, .b5, .b6 {
+        width: 400px;
+        height: 100px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
 }
 
 @media (min-width: 360px) and (max-width: 719px) {      /* Mobile layout */
