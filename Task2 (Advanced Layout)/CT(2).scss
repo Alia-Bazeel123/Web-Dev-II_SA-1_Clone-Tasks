@@ -10,11 +10,11 @@ $yellow: #EEF36A;
 $shadow: 4px 4px 8px #231651;
 
 
-body {background-color: $navy-blue; /* setting background color */}
+body {background-color: $black; /* setting background color */}
 
 header {
     background-color: $white;
-    border-bottom: 5px solid $black;
+    border-bottom: 5px solid $light-blue;
 }
 
 header h1 {color: $black;}
@@ -31,7 +31,7 @@ nav a {color: $black;}
 
 button {
     font-size: $midium-font;       /* font size --> 2em */
-    border: 1px solid $black;      /*border color 1px solid black*/
+    border: 1px solid $dark-blue;      /*border color 1px solid black*/
     background-color: $light-blue; /* light blue */
 }
 

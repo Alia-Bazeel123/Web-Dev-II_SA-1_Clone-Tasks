@@ -1,10 +1,10 @@
 body {
-  background-color: #231651; /* setting background color */
+  background-color: #070410; /* setting background color */
 }
 
 header {
   background-color: #FFFFFF;
-  border-bottom: 5px solid #070410;
+  border-bottom: 5px solid #4DCCBD;
 }
 
 header h1 {
@@ -30,7 +30,7 @@ nav a {
 } /* to change the font color of the text "SEARCH" */
 button {
   font-size: 2em; /* font size --> 2em */
-  border: 1px solid #070410; /*border color 1px solid black*/
+  border: 1px solid 2px solid #070410; /*border color 1px solid black*/
   background-color: #4DCCBD; /* light blue */
 }
 
