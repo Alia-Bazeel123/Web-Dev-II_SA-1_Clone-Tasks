@@ -219,9 +219,10 @@ button {
         margin-left: 0;
     }
     .contents {
-        padding: 32px; /* large_spacing */
-        gap: 32px;     /* large_spacing */
+        padding: 32px;      /* large_spacing */
+        gap: 32px;          /* large_spacing */
         width: 900px;
+        margin-left: 150px; /* to make the content perfectly aligned under the extended header */
     }
     /* Styling as columns and rows (tablet) */
     .movies {
@@ -272,11 +273,11 @@ button {
         margin-bottom: 16px;
     }
     .abt-mov-1 p{padding-bottom: 16px;}
-    .abt-mov-2 p{padding-bottom: 16px;}
+    .abt-mov-2 p{padding-bottom: 45px;}
     .abt-mov-3 p{padding-bottom: 75px;}
-    .abt-mov-4 p{padding-bottom: 16px;}
+    .abt-mov-4 p{padding-bottom: 75px;}
     .abt-mov-5 p{padding-bottom: 73px;}
-    .abt-mov-6 p{padding-bottom: 16px;}
+    .abt-mov-6 p{padding-bottom: 45px;}
     .b1, .b2, .b3, .b4, .b5, .b6 {
         width: 400px;
         height: 100px;
@@ -287,10 +288,15 @@ button {
 }
 
 @media (min-width: 360px) and (max-width: 719px) {      /* Mobile layout */
-    header {padding: 16px 16px; /* large_spacing */}
+    header {
+        padding: 16px 16px; /* large_spacing */
+        width: 1450px;      /* to fit the search inside (extended header-mobile) */
+    }
     .contents {
-        padding: 16px; /* large_spacing */
-        gap: 16px;     /* large_spacing */
+        width: 900px;
+        padding: 16px;      /* large_spacing */
+        gap: 16px;          /* large_spacing */
+        margin-left: 555px; /* to make the content perfectly aligned under the extended header */
     }
     nav {display: none; /* nav-items are not there in the wireframe */}
     .mov-vertical {display: contents; /* break the layout effect (this was created for desktop) */}
