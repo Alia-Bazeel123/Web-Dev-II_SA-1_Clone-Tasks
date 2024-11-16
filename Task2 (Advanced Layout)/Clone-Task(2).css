@@ -316,5 +316,11 @@ button {
         height: auto;
         margin-bottom: 16px;
     }
+    .b1, .b2, .b3, .b4, .b5, .b6 {
+        width: 400px;
+        height: 70px;
+        text-align: center;
+        margin-left: 10px;
+    }
 }
 
